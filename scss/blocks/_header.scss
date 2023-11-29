@@ -1,0 +1,313 @@
+// Шапка сайта
+
+.header {
+  min-height: 791px;
+  background: url(../../img/header/abstract-blur-coffee-shop.jpg),
+    lightgray 50% / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 206, 0, 0.83);
+    backdrop-filter: blur(6.5px);
+  }
+
+  .header__img-wrapper {
+    position: absolute;
+    top: 0;
+    left: calc((-100vw / 8));
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 2000px) {
+      left: -198px;
+    }
+
+    > div {
+      z-index: 5;
+      img {
+        height: 100%;
+      }
+    }
+
+    .header__img1 {
+      margin-right: 100px;
+
+      img {
+        transform: rotate(-157.42deg);
+        height: 90%;
+      }
+
+      @media (max-width: 760px) {
+        position: absolute;
+        transform: rotate(-26.428deg);
+        margin: 199px 802px 0px 0px;
+      }
+    }
+    .header__img2 {
+      margin-top: -30px;
+      position: relative;
+
+      @media (max-width: 760px) {
+        position: absolute;
+        transform: rotate(-26.428deg);
+        margin: -56px 0px 0px 618px;
+        height: 60%;
+      }
+
+      @media (max-width: 540px) {
+        margin-left: 463px;
+      }
+
+      .header__img3 {
+        position: absolute;
+        bottom: -5px;
+        left: calc(100vw / 5.5);
+        height: 84%;
+
+        @media (max-width: 760px) {
+          transform: rotate(26.428deg);
+          bottom: -116px;
+          left: calc(67vw / 5.5);
+          height: 100%;
+        }
+      }
+
+      > img {
+        @media (max-width: 900px) {
+          filter: blur(2.5px);
+        }
+        @media (max-width: 660px) {
+          filter: blur(0px);
+        }
+      }
+    }
+  }
+
+  .header__title {
+    color: #232323;
+    font-family: Museo;
+    @include adaptiv-font(44, 24);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.76px;
+    margin-top: 24px;
+    width: 57%;
+
+    @media (max-width: 1000px) {
+      width: 68%;
+    }
+    @media (max-width: 400px) {
+      font-size: 24px;
+      width: 76%;
+    }
+  }
+
+  .header__text {
+    color: #232323;
+    font-family: Museo;
+    @include adaptiv-font(35, 14);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.4px;
+    margin-top: 24px;
+    width: 50%;
+
+    @media (max-width: 400px) {
+      font-size: 14px;
+    }
+
+    span {
+      font-family: HelveticaNeueCyr;
+      font-weight: 500;
+    }
+  }
+
+  .header__dates {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 53px;
+
+    @media (max-width: 1140px) {
+      margin-top: 25px;
+      column-gap: 16px;
+    }
+
+    > div {
+      border-radius: 10px;
+      background: rgba(66, 66, 66, 0.8);
+      display: flex;
+      align-items: center;
+      width: 209px;
+      padding: 10px 15px;
+
+      @media (max-width: 1090px) {
+        width: 179px;
+        padding: 7px 15px;
+      }
+      @media (max-width: 960px) {
+        width: 173px;
+        padding: 5px 10px;
+      }
+      @media (max-width: 760px) {
+        flex: 0 0 65%;
+
+        &:last-child {
+          margin-top: 15px;
+        }
+      }
+
+      .header__date {
+        color: #fff;
+        font-family: HelveticaNeueCyr;
+        @include adaptiv-font(40, 30);
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: -1.6px;
+        margin-right: 13px;
+      }
+
+      .header__date-col {
+        span {
+          color: #fff;
+          font-family: HelveticaNeueCyr;
+          @include adaptiv-font(18, 16);
+          font-style: normal;
+          font-weight: normal;
+          line-height: normal;
+          letter-spacing: -0.72px;
+        }
+        div {
+          color: #d2e400;
+          font-family: Museo;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.48px;
+        }
+      }
+    }
+  }
+
+  .header__btns {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 53px;
+
+    @media (max-width: 1140px) {
+      margin-top: 41px;
+    }
+    @media (max-width: 960px) {
+      column-gap: 8px;
+      margin-top: 31px;
+    }
+    @media (max-width: 760px) {
+      margin-top: 47px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+
+      @media (max-width: 760px) {
+        flex: 0 0 100%;
+
+        &:last-child {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    span {
+      font-family: HelveticaNeueCyr;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: block;
+
+      @media (max-width: 960px) {
+        font-size: 16px;
+      }
+      @media (max-width: 760px) {
+        font-size: 18px;
+      }
+      @media (max-width: 300px) {
+        font-size: 16px;
+      }
+    }
+
+    .header__red {
+      border: solid 1px #e10000;
+      background: #e10000;
+      padding: 23px 60px;
+
+      @media (max-width: 1090px) {
+        padding: 18px 22px;
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+
+    .header__transparent {
+      flex-shrink: 0;
+      background: transparent;
+      border: solid 1px #171717;
+      padding: 23px 20px;
+
+      @media (max-width: 1090px) {
+        padding: 18px 20px;
+      }
+      @media (max-width: 960px) {
+        padding: 18px 11px;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    min-height: calc(100vw * 0.6);
+  }
+  @media (max-width: 845px) {
+    min-height: 507px;
+  }
+  @media (max-width: 760px) {
+    min-height: 670px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 60px;
+      left: 25px;
+      width: 100%;
+      height: 28%;
+      background: #f8c712;
+      filter: blur(23.5px);
+      z-index: 10;
+    }
+  }
+  @media (max-width: 400px) {
+    min-height: 650px;
+  }
+}

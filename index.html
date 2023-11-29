@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="fonts/HelveticaNeueCyr/stylesheet.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/sendForm.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__img-wrapper">
+        <div class="header__img1">
+          <img src="./img/header/granos-cafe-768x480_2.png" alt="" />
+        </div>
+        <div class="header__img2">
+          <img src="./img/header/granos-cafe-768x480_1.png" alt="" />
+
+          <div class="header__img3">
+            <img src="./img/header/tema_1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="logo">
+          <div class="logo__img">
+            <img src="./img/svg/icons8-english.svg" alt="" />
+          </div>
+          <div class="logo__caption">
+            <span>English</span>
+          </div>
+        </div>
+        <h1 class="header__title">
+          Вкладывайте незначительные деньги каждый день в копилку своих знаний.
+        </h1>
+        <p class="header__text">
+          Следующий курс для вас будет стоить всего
+          <span>178 рублей в день</span>
+        </p>
+        <div class="header__dates">
+          <div>
+            <div class="header__date">01</div>
+            <div class="header__date-col">
+              <span>Ноября</span>
+              <div>Ближайший старт</div>
+            </div>
+          </div>
+          <div>
+            <div class="header__date">21</div>
+            <div class="header__date-col">
+              <span>Октября</span>
+              <div>Конец акции</div>
+            </div>
+          </div>
+        </div>
+        <div class="header__btns">
+          <a href="#main" class="header__red">
+            <span>Узнать подробнее</span>
+          </a>
+          <a href="#feedback" class="header__transparent">
+            <span>Бесплатная консультация</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <div class="container">
+        <h1 class="main__header">Выберите свой вариант обучения</h1>
+        <div class="main__wrapper"></div>
+      </div>
+    </main>
+
+    <section class="banner">
+      <div class="container">
+        <div class="banner__wrapper">
+          <img class="banner__back" src="./img/bannner/Group2.png" alt="" />
+          <div class="banner__gift">подарок</div>
+          <div class="banner__caption">
+            Спецкурс "Английский для эмиграции" <br />
+            Спецкурс "Как преодолеть языковой барьер"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="feedback__wrapper">
+          <h1 class="feedback__title">Еще думаете?</h1>
+          <p class="feedback__text">
+            Записывайтесь на бесплатный урок и попробуйте сами, это поможет
+            принять решение
+          </p>
+          <form class="feedback__form">
+            <input
+              type="text"
+              placeholder="Введите ваше имя"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='Введите ваше имя'"
+              required
+              minlength="3"
+              name="name"
+            />
+            <input
+              type="phone"
+              placeholder="Введите ваш телефон"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='Введите ваш телефон'"
+              required
+              name="phone"
+            />
+            <input
+              type="email"
+              placeholder="Введите ваш email"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='Введите ваш email'"
+              required
+              name="email"
+            />
+            <button type="submit">
+              <span>записаться</span>
+            </button>
+          </form>
+          <p class="feedback__cd">
+            Нажимая на кнопку, вы даете согласие на обработку персональных
+            данных и соглашаетесь с политикой конфиденциальности
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="logo footer__logo">
+            <div class="logo__img">
+              <img src="./img/svg/icons8-english-shad.svg" alt="" />
+            </div>
+            <div class="logo__caption">
+              <span>English</span>
+            </div>
+          </div>
+          <p class="footer__copyright">
+            2015 - 2021 © English. Все права защищены.<br />
+            Политика конфиденциальности<br />
+            Соглашение об обработке персональных данных<br />
+          </p>
+          <p class="footer__address">
+            ООО "Инглиш", юридический адрес: 000000, Санкт-Петербург, ул. Улица,
+            д. 0/00 лит. 0, пом. 0<br />
+            ОГРН: 000000000000 | ИНН: 000000000 | КПП: 000000000
+          </p>
+          <div class="footer__social">
+            <img src="./img/svg/vk_red copy.svg" alt="" />
+            <img src="./img/svg/bxl_telegram.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-win" hidden>
+      <div>
+        <div class="modal-close"></div>
+        <h1 class="modal-header" id="modalHeader"></h1>
+        <button class="modal-btn">Закрыть окно</button>
+      </div>
+    </div>
+    <div class="overlay" hidden></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </body>
+</html>

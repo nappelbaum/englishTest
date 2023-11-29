@@ -1,0 +1,123 @@
+.modal-win {
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 0 18px 2px #034711;
+  width: 50vw;
+  padding: 50px;
+  background: #f5c618;
+
+  @media (max-width: 560px) {
+    width: 95vw;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+  }
+}
+.animated {
+  animation-name: top-anim;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  /* animation-fill-mode: forwards; */
+}
+.animated-rev {
+  animation-name: top-anim-rev;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-anim {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes top-anim-rev {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-300px);
+  }
+  90% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #005815;
+  transition: opacity 0.4s ease-out;
+  opacity: 0;
+  z-index: 30;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 2%;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: calc(50% - 1px);
+  width: 30px;
+  height: 3px;
+  background-color: #247c38;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-header {
+  text-align: center;
+  font-family: HelveticaNeueCyr;
+  font-size: 40px;
+}
+
+.modal-btn {
+  color: #fff;
+  font-family: HelveticaNeueCyr;
+  font-size: 16px;
+
+  border: solid 1px #b60000;
+  background: #b60000;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}

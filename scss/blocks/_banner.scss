@@ -1,0 +1,62 @@
+.banner__wrapper {
+  position: relative;
+  margin: 90px 0;
+  width: 100%;
+  min-height: calc(100vw * 0.25);
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(268deg, #f5c618 1.36%, #ffe481 97.73%);
+
+  @media (min-width: 1440px) {
+    min-height: 361px;
+  }
+  @media (max-width: 1025px) {
+    margin: 37px 0;
+    border-radius: 10px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner__gift {
+    position: absolute;
+    top: 24%;
+    left: 47%;
+    color: #7f7a08;
+    font-family: Bebas;
+    @include adaptiv-font(120, 36);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 79%;
+    letter-spacing: -5.08px;
+    text-transform: uppercase;
+    text-shadow: 0px -2px 1px rgba(229, 229, 229, 0.4),
+      0px 2px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .banner__caption {
+    position: absolute;
+    top: 62%;
+    left: 47%;
+    color: #2c2c2c;
+    font-family: HelveticaNeueCyr;
+    @include adaptiv-font(22, 6);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+
+    @media (max-width: 360px) {
+      top: 66%;
+      line-height: 130%;
+      font-size: 5px;
+    }
+  }
+}

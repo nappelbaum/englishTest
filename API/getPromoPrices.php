@@ -1,6 +1,6 @@
 <?php
     
-    $db = new PDO('mysql:host=localhost;dbname=u2076368_englishTest', 'u2076368_default', 'M4Kkn85Ge7S5qAAs');
+    $db = new PDO('mysql:host=localhost;dbname=...', '...', '...');
     $db->exec("SET NAMES UTF8");
     
     $sql = "SELECT * FROM promo_prices";

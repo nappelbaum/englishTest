@@ -10,7 +10,7 @@
     } else if(mb_strlen($name) > 50 || mb_strlen($phone) > 50 || mb_strlen($email) > 50) {
         echo "Длина записи в поле не должна превышать 50 символов!";
     } else {
-        $db = new PDO('mysql:host=localhost;dbname=u2076368_englishTest', 'u2076368_default', 'M4Kkn85Ge7S5qAAs');
+        $db = new PDO('mysql:host=localhost;dbname=...', '...', '...');
         $db->exec("SET NAMES UTF8");
 
         $query = $db->prepare("INSERT INTO applications (name, phone, email, timestamp) VALUES (:name, :phone, :email, :timestamp)");

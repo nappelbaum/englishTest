@@ -316,7 +316,7 @@ a {
       @media (max-width: 760px) {
         .header .header__btns span {
           font-size: 18px; } }
-      @media (max-width: 300px) {
+      @media (max-width: 310px) {
         .header .header__btns span {
           font-size: 16px; } }
     .header .header__btns .header__red {
@@ -362,6 +362,61 @@ a {
     .header {
       min-height: 650px; } }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 14px;
+  background-color: #ff390e;
+  display: none;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border-radius: 60px;
+  cursor: pointer;
+  user-select: none;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 50px 18px;
+  color: #fefefe;
+  height: 66px;
+  transition: opacity 1000ms ease-out; }
+  @media (max-width: 1025px) {
+    .scroll-to-top {
+      font-size: 18px;
+      padding: 44px 14px; } }
+  .scroll-to-top img {
+    display: inline-block; }
+  .scroll-to-top span {
+    transform: rotate(-90deg);
+    padding-bottom: 4px; }
+
+.animated-op {
+  animation-name: opacity-hide;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; }
+
+.animated-op-rev {
+  animation-name: opacity-hide-rev;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; }
+
+@keyframes opacity-hide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes opacity-hide-rev {
+  0% {
+    opacity: 1;
+    display: flex; }
+  100% {
+    opacity: 0;
+    display: none; } }
 .main {
   margin-top: calc(100vw * 0.06);
   color: #1b002f;
@@ -377,7 +432,7 @@ a {
     color: #181818;
     margin-bottom: calc(100vw * 0.052);
     text-align: center;
-    font-size: calc( 16px + 21 * ((100vw - 320px) / (1120)) );
+    font-size: calc( 20px + 17 * ((100vw - 320px) / (1120)) );
     font-style: normal;
     font-weight: 700;
     line-height: 120%; }
@@ -386,7 +441,7 @@ a {
         font-size: 37px; } }
     @media (max-width: 320px) {
       .main .main__header {
-        font-size: 16px; } }
+        font-size: 20px; } }
     @media (max-width: 560px) {
       .main .main__header {
         margin-bottom: 24px; } }

@@ -3,8 +3,10 @@ const modalForm = document.querySelector(".modal-win");
 const overlay = document.querySelector(".overlay");
 const modalClose = document.querySelector(".modal-close");
 const modalBtn = document.querySelector(".modal-btn");
+const loader = document.querySelector(".feedback__loader");
 
 function openModal() {
+  document.body.classList.add("lock");
   modalForm.hidden = false;
   overlay.hidden = false;
   modalForm.style.top = `${
@@ -19,6 +21,7 @@ function openModal() {
 }
 
 function closeModal() {
+  document.body.classList.remove("lock");
   modalForm.classList.remove("animated");
   modalForm.classList.add("animated-rev");
   overlay.style.opacity = "0";
@@ -44,15 +47,26 @@ async function postResourse(url, data) {
 
 function sendForm(e) {
   e.preventDefault();
+
+  loader.classList.remove("visually-hidden");
+  loader.classList.add("loader-vis");
+  document.body.classList.add("lock");
+
   const formdata = new FormData(e.target);
-  postResourse("/API/postForm.php", formdata).then((res) => {
-    modalHeader.innerHTML = res;
-    openModal();
-    if (res === "Данные отправлены в базу данных!") {
-      feedback__form.reset();
-      feedback.style.display = "none";
-    }
-  });
+  postResourse("/API/postForm.php", formdata)
+    .then((res) => {
+      modalHeader.innerHTML = res;
+      openModal();
+
+      loader.classList.add("visually-hidden");
+      loader.classList.remove("loader-vis");
+
+      if (res === "Данные отправлены в базу данных!") {
+        feedback__form.reset();
+        feedback.style.display = "none";
+      }
+    })
+    .catch(() => document.body.classList.remove("lock"));
 }
 
 feedback__form.addEventListener("submit", (e) => sendForm(e));

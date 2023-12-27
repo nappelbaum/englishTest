@@ -16,6 +16,10 @@
   }
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .logo {
   display: flex;
   align-items: center;

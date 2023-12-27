@@ -81,12 +81,12 @@
         span {
           position: relative;
           font-family: Helvetica, sans-serif;
-          @include adaptiv-font(48, 16);
+          @include adaptiv-font(44, 16);
           font-weight: 500;
           line-height: 108%;
 
           @media (max-width: 560px) {
-            font-size: 50px;
+            font-size: 44px;
           }
           @media (max-width: 320px) {
             font-size: 38px;

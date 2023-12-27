@@ -175,6 +175,7 @@
     column-gap: 22px;
     flex-wrap: wrap;
     margin-top: 53px;
+    user-select: none;
 
     @media (max-width: 1140px) {
       margin-top: 25px;
@@ -361,7 +362,7 @@
   row-gap: 8px;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 100;
   border-radius: 60px;
   cursor: pointer;
   user-select: none;

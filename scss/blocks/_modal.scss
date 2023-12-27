@@ -1,6 +1,6 @@
 .modal-win {
   position: fixed;
-  z-index: 100;
+  z-index: 150;
   box-shadow: 0 0 18px 2px #034711;
   width: 50vw;
   padding: 50px;
@@ -69,7 +69,7 @@
   background-color: #005815;
   transition: opacity 0.4s ease-out;
   opacity: 0;
-  z-index: 30;
+  z-index: 130;
 }
 
 .modal-close {
@@ -114,10 +114,13 @@
   color: #fff;
   font-family: HelveticaNeueCyr;
   font-size: 16px;
-
   border: solid 1px #b60000;
   background: #b60000;
   padding: 15px 30px;
   cursor: pointer;
   border-radius: 5px;
+
+  &:focus-visible {
+    border: 2px solid #0c0c0c;
+  }
 }
